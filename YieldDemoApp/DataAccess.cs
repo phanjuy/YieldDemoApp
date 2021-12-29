@@ -6,13 +6,9 @@ namespace YieldDemoApp
     {
         public static IEnumerable<Person> GetPeople()
         {
-            List<Person> output = new();
-
-            output.Add(new Person("Duy", "Phan"));
-            output.Add(new Person("Gordon", "Kiên"));
-            output.Add(new Person("Gavin", "Chí"));
-
-            return output;
+            yield return new Person("Duy", "Phan");
+            yield return new Person("Gordon", "Kiên");
+            yield return new Person("Gavin", "Chí");
         }
     }
 }
