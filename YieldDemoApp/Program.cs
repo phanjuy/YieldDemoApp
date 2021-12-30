@@ -16,7 +16,7 @@ namespace YieldDemoApp
                 Console.WriteLine($"Read {p.FirstName} {p.LastName}");
             }
 
-            var primeNumbers30000 = Generators.GetPrimeNumbers().Take(30000);
+            var primeNumbers30000 = Generators.GetPrimeNumbers().Take(30000).ToList(); // Dont do this
 
             foreach (var prime in primeNumbers30000)
             {
